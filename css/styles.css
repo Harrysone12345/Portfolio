@@ -419,7 +419,7 @@
 
   .project-gallery img{
     width:100%;
-    height:110px;
+    height:150px;
     object-fit:cover;
     display:block;
     transition:transform 0.3s ease;
@@ -793,3 +793,34 @@ section, .cat-nav{position:relative;z-index:2;}
     backdrop-filter:none;
   }
 }
+
+/* ---------- BIGGER GALLERIES ---------- */
+/* featured: first image fills the width, the rest sit below it */
+.project-gallery.featured{
+  grid-template-columns:1fr 1fr;
+}
+
+.project-gallery.featured img:first-child{
+  grid-column:1 / -1;
+  height:auto;
+  max-height:340px;
+  object-fit:contain;
+  background:#fff;
+}
+
+.project-gallery.featured img{
+  border:1px solid var(--line-strong);
+  background:#fff;
+}
+
+.media-caption{
+  margin-top:0.6rem;
+  font-family:var(--mono);
+  font-size:0.68rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--blue);
+}
+
+/* single-image galleries (renders, diagrams) get more room */
+.project-gallery img:only-child{max-height:440px;}
