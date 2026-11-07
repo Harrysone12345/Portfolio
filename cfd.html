@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFD & Aerothermodynamics — Harrison B. Tracy</title>
+<meta name="description" content="Hypersonic boundary-layer research, rotating-wake simulations, and internal-flow work on naval valves, mostly in STAR-CCM+.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="grid-bg" style="height:100vh;"></div>
+
+<header>
+  <a class="brand" href="index.html"><span class="dot"></span>H. TRACY</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="mainNav">
+    <a href="cfd.html" aria-current="page">CFD</a>
+    <a href="design.html">Design</a>
+    <a href="coding.html">Coding</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="page-head">
+  <span class="mono-label crumbs"><a href="index.html">Index</a> / CFD</span>
+  <h1>CFD &amp; Aerothermodynamics</h1>
+  <p class="page-intro">Hypersonic boundary-layer research, rotating-wake simulations, and internal-flow work on naval valves, mostly in STAR-CCM+.</p>
+</section>
+
+<section class="projects-section" id="projects">
+  <!--
+    TO ADD A PROJECT: copy one <article> below, paste it in the list, and edit.
+    Put images in images/<project-name>/ and reference them with a relative path.
+    Any <img> inside a .project-gallery zooms in a lightbox automatically.
+    Delete the .project-media block (and keep class "text-only") for a card with no images.
+  -->
+
+  <div class="section-head">
+    <span class="mono-label">03 sheets shown</span>
+  </div>
+
+  <div class="project-list">
+
+    <article class="project-card">
+      <div class="project-body">
+        <span class="project-num">CFD-01 / AIAA SCITECH '27</span>
+        <h3 class="project-title">Surface Defects &amp; Thermochemistry in Hypersonic Boundary Layers</h3>
+        <p class="project-desc">CFD study of Mach 6 flow over flat-plate divots of varying depth, isolating how recirculation structure and gas-model choice (ideal vs. real vs. non-equilibrium air) shift peak surface heating during reentry. Comparing gas models across divot depths revealed a 120&nbsp;K discrepancy in peak surface temperature and shifts in recirculation structure attributable to real-gas thermochemical effects.</p>
+        <p class="project-citation">Tracy, H. B., and Sharma Priyadarshini, M., &ldquo;Effect of Surface Defects and Thermochemistry on Laminar Hypersonic Boundary Layers,&rdquo; AIAA SciTech 2027 Forum, 2027 (accepted).</p>
+        <div class="project-tools">
+          <span class="tool-tag">STAR-CCM+</span>
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">LaTex</span>
+        </div>
+        <div class="doc-links">
+          <a class="doc-link" href="files/divot-simulations-aiaa2027.pdf" download="divot-simulations-aiaa2027.pdf">Download the paper (PDF) ↓</a>
+        </div>
+      </div>
+      <div class="project-media">
+        <div class="project-gallery">
+          <img src="images/divot/heat-transfer-gas-models.png" alt="Heat transfer on the divot surface across three gas models" loading="lazy">
+          <img src="images/divot/polyhedral-mesh.png" alt="Polyhedral computational mesh around the divot" loading="lazy">
+          <img src="images/divot/temperature-contour-h12.png" alt="Temperature contour for the h=12 divot simulation, showing recirculation structure in the boundary layer" loading="lazy">
+        </div>
+      </div>
+      <div class="title-block">
+        <span>Hypersonic Aerothermodynamics</span>
+        <span>2026</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-body">
+        <span class="project-num">CFD-02 / WIND TURBINES</span>
+        <h3 class="project-title">Applied CFD on Small-Scale Wind Turbine Blades</h3>
+        <p class="project-desc">Built a 3D sliding-mesh CFD framework to resolve the rotating wake behind a small-scale turbine, comparing thrust, torque, and power across three SG6043 blade configurations with and without winglets.</p>
+        <div class="project-tools">
+          <span class="tool-tag">STAR-CCM+</span>
+          <span class="tool-tag">SolidWorks</span>
+        </div>
+        <div class="doc-links">
+          <a class="doc-link" href="files/wind-turbine-report.pdf" download="wind-turbine-report.pdf">Download the report (PDF) ↓</a>
+        </div>
+      </div>
+      <div class="project-media">
+        <video class="project-video" controls muted loop playsinline preload="metadata">
+          <source src="videos/wind-turbine-wake.mp4" type="video/mp4">
+        </video>
+        <div class="project-gallery">
+          <img src="images/wind-turbine/blade-geometry-tsr41.png" alt="4.1 TSR winglet blade geometry modeled in SolidWorks" loading="lazy">
+          <img src="images/wind-turbine/turbulent-viscosity-ratio.png" alt="Turbulent viscosity ratio in the turbine wake" loading="lazy">
+          <img src="images/wind-turbine/residual-convergence.png" alt="Residual convergence history for the 4.1 TSR winglet case" loading="lazy">
+        </div>
+      </div>
+      <div class="title-block">
+        <span>Propulsion &amp; Rotating Machinery</span>
+        <span>2026</span>
+      </div>
+    </article>
+
+    <article class="project-card text-only">
+      <div class="project-body">
+        <span class="project-num">CFD-03 / HII — NEWPORT NEWS SHIPBUILDING</span>
+        <h3 class="project-title">Naval Valve CFD &amp; Mesh Convergence</h3>
+        <p class="project-desc">Modeled naval valve systems in SolidWorks, then ran mesh convergence studies with an in-house CFD solver to cut simulation runtime while matching experimental flow-test data to within 5%.</p>
+        <div class="project-tools">
+          <span class="tool-tag">SolidWorks</span>
+          <span class="tool-tag">CFD</span>
+          <span class="tool-tag">Mesh Convergence</span>
+        </div>
+      </div>
+      <div class="title-block">
+        <span>Fluid Systems Engineering Internship</span>
+        <span>2025</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="cat-nav">
+  <a href="index.html#work">← All categories</a>
+  <a href="design.html">Design &amp; Prototyping →</a>
+</div>
+
+<footer>
+  © 2026 Harrison B. Tracy
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" type="button">Close ✕</button>
+  <img id="lightbox-img" alt="Enlarged view">
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

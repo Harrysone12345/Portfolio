@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding & Software — Harrison B. Tracy</title>
+<meta name="description" content="Machine learning for aerothermodynamics, onboard computer vision, and tools that automate CAD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="grid-bg" style="height:100vh;"></div>
+
+<header>
+  <a class="brand" href="index.html"><span class="dot"></span>H. TRACY</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="mainNav">
+    <a href="cfd.html">CFD</a>
+    <a href="design.html">Design</a>
+    <a href="coding.html" aria-current="page">Coding</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="page-head">
+  <span class="mono-label crumbs"><a href="index.html">Index</a> / Coding</span>
+  <h1>Coding &amp; Software</h1>
+  <p class="page-intro">Machine learning for aerothermodynamics, onboard computer vision, and tools that automate CAD.</p>
+</section>
+
+<section class="projects-section" id="projects">
+  <!--
+    TO ADD A PROJECT: copy one <article> below, paste it in the list, and edit.
+    Put images in images/<project-name>/ and reference them with a relative path.
+    Any <img> inside a .project-gallery zooms in a lightbox automatically.
+    Delete the .project-media block (and keep class "text-only") for a card with no images.
+  -->
+
+  <div class="section-head">
+    <span class="mono-label">03 sheets shown</span>
+  </div>
+
+  <div class="project-list">
+
+    <article class="project-card text-only">
+      <div class="project-body">
+        <span class="project-num">COD-01 / RESEARCH</span>
+        <h3 class="project-title">NN + Gaussian Process Surrogate for Hypersonic Air Chemistry</h3>
+        <p class="project-desc">A feedforward network (built from scratch with NumPy backprop) maps temperature to equilibrium mole fractions of 5-species high-temperature air, with a per-species Gaussian Process layered on top for uncertainty bands, built to speed up reentry heat-transfer modeling. Trained on 1,470 CFD solver outputs, with the data preprocessed and the architecture and hyperparameters tuned to minimize prediction error across the equilibrium composition space.</p>
+        <div class="project-tools">
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">NumPy</span>
+          <span class="tool-tag">Gaussian Processes</span>
+        </div>
+        <div class="doc-links">
+          <a class="doc-link" href="files/ml-surrogate-model.html" download="ml-surrogate-model.html">Download the notebook (HTML) ↓</a>
+          <a class="doc-link" href="files/ml-surrogate-model.ipynb" download="ml-surrogate-model.ipynb">Download .ipynb ↓</a>
+        </div>
+      </div>
+      <div class="title-block">
+        <span>Machine Learning for Aerothermodynamics</span>
+        <span>2026</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-body">
+        <span class="project-num">COD-02 / VT VEHICLE DESIGN</span>
+        <h3 class="project-title">Autonomous UAV for LiDAR Surveying</h3>
+        <p class="project-desc">Co-led a student team designing, building, and flying a low-cost autonomous UAV for terrain surveying. Led the software side: onboard data acquisition and a real-time object-detection system running on a Linux-based flight computer.</p>
+        <div class="project-tools">
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">PyTorch</span>
+          <span class="tool-tag">TensorFlow</span>
+          <span class="tool-tag">RaspberryPi</span>
+          <span class="tool-tag">Linux OS</span>
+        </div>
+      </div>
+      <div class="project-media">
+        <div class="project-gallery">
+          <img src="images/lidar-uav/software-architecture.png" alt="Block diagram of the on-board object detection software pipeline running on a Raspberry Pi 5" loading="lazy">
+        </div>
+      </div>
+      <div class="title-block">
+        <span>Integrated Software System Design</span>
+      </div>
+    </article>
+
+    <article class="project-card text-only">
+      <div class="project-body">
+        <span class="project-num">COD-03 / NORTHROP GRUMMAN — MISSION SYSTEMS</span>
+        <h3 class="project-title">Parametric Bearing Modeling Tool</h3>
+        <p class="project-desc">Built a Python-to-NX pipeline that automates 3D model generation and preliminary load calculations for bearings, cutting model creation time by over 99%.</p>
+        <div class="project-tools">
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">Siemens NX</span>
+          <span class="tool-tag">Automation</span>
+        </div>
+      </div>
+      <div class="title-block">
+        <span>Design Automation</span>
+        <span>2026</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="cat-nav">
+  <a href="design.html">← Design &amp; Prototyping</a>
+  <a href="index.html#work">All categories ↑</a>
+</div>
+
+<footer>
+  © 2026 Harrison B. Tracy
+</footer>
+
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" type="button">Close ✕</button>
+  <img id="lightbox-img" alt="Enlarged view">
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
