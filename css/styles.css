@@ -824,3 +824,6 @@ section, .cat-nav{position:relative;z-index:2;}
 
 /* single-image galleries (renders, diagrams) get more room */
 .project-gallery img:only-child{max-height:440px;}
+
+/* stacked captioned images in one media column */
+.media-caption + .project-gallery{margin-top:1.6rem;}
