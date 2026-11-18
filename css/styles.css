@@ -827,3 +827,7 @@ section, .cat-nav{position:relative;z-index:2;}
 
 /* stacked captioned images in one media column */
 .media-caption + .project-gallery{margin-top:1.6rem;}
+
+/* images placed inside the text column, and tall diagrams */
+.project-body .project-gallery{margin-top:1.8rem;}
+.project-gallery.tall img:only-child{max-height:none;}
